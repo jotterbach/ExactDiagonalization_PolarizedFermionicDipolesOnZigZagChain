@@ -1,0 +1,2 @@
+ExactDiagonalization_PolarizedFermionicDipolesOnZigZagChain
+===========================================================
