@@ -1,0 +1,19 @@
+#!/bin/sh
+# script to call the ED procedure for the polarized dipoles
+# from bash
+#
+# The parameters and their order can be looked up in the 
+# documentaion of the CallDiagonalization.py
+
+echo 'numer of arguments:' $#
+if [ ! "$1" = corr ] && [ $# = 8 ]; then
+   echo 'calculate spectrum with method: ' $1
+   python CallDiagonalization.py $1 $2 $3 $4 $5 $6 $7 $8 $9 > "$1".out
+   echo 'done'
+elif [ "$1" = corr ] &&  [ $# = 7 ]; then
+   echo 'calculate correlations'
+   python CallDiagonalization.py $1 $2 $3 $4 $5 $6 $7 $8 > "$1".out
+   echo 'done'
+else
+   echo 'wrong parameter specs'
+fi
