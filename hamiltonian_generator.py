@@ -10,7 +10,6 @@ from scipy.special import *
 import scipy.sparse as sp
 import scipy.sparse.linalg as la
 import itertools
-import matplotlib.pyplot as plt
 import time
 import re
 
